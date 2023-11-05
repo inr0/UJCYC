@@ -1,6 +1,6 @@
 ﻿**Invisible Description**
 
-#Steganography![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.001.png)
+#Steganography!
 
 ![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.002.png)
 
@@ -55,5 +55,6 @@ cat 1.jpg.out
 we found a flag but its a fake one. i tried the same method to for all 6 pictures and I found the real flag in 189.jpg
 
 ![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.011.png)
-
-FLAG : UJCYC{N0T\_1NV1S1BL3\_3N0UGH}![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.012.png)
+```
+FLAG : UJCYC{N0T\_1NV1S1BL3\_3N0UGH}
+```
