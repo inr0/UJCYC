@@ -1,14 +1,18 @@
-﻿**Invisible Description**
+<h1 align="center"> ﻿Invisible </h1> 
+ 
+ **Description**
 
-#Steganography!
+#Steganography
 
 ![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.002.png)
 
-[Dont_Click.zip](http://139.59.212.68/files/d54cd94125227bdabb639718ea2e7b7d/Dont_Click.zip?token=eyJ1c2VyX2lkIjoxMTQsInRlYW1faWQiOjUsImZpbGVfaWQiOjd9.ZUf6SA.6s15T-9bz0Rh4qAjvyhQJLlvWWU)![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.003.png)
+[Dont_Click.zip](http://139.59.212.68/files/d54cd94125227bdabb639718ea2e7b7d/Dont_Click.zip?token=eyJ1c2VyX2lkIjoxMTQsInRlYW1faWQiOjUsImZpbGVfaWQiOjd9.ZUf6SA.6s15T-9bz0Rh4qAjvyhQJLlvWWU)
+
+![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.003.png)
 
 First we unzip the file.
 
-unzip Dont\_Click.zip
+`unzip Dont Click.zip`
 
 The file contains 248 JPEG pictures
 
@@ -24,7 +28,7 @@ So I needed to find another way.
 
 **Foothold**
 
-ls -al
+`ls -al`
 
 ![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.006.png)
 
@@ -34,21 +38,21 @@ I found that some pictures have different size / length , so I made another dire
 
 There was 6 pictures with different size.
 
-I tried strings | grep "UJCYC" since flag start with UJCYC but that did not get me anywhere.
+I tried `strings | grep "UJCYC"` since flag start with UJCYC but that did not get me anywhere.
 
-then I tried steghide info 1.jpg
+then I tried `steghide info 1.jpg`
 
 ![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.008.png)
 
 and we can see that there is embedded data indeed.
 
-I used stegseek 1.jpg /usr/share/wordlists/rockyou.txt to brute force the passphrase
+I used `stegseek 1.jpg /usr/share/wordlists/rockyou.txt` to brute force the passphrase
 
-with rockyou.txt wordlist since I don't know the passphrase and we found the passphrase.
+with `rockyou.txt` wordlist since I don't know the passphrase and we found the passphrase.
 
 ![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.009.png)
 
-cat 1.jpg.out
+`cat 1.jpg.out`
 
 ![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.010.png)
 
@@ -56,5 +60,5 @@ we found a flag but its a fake one. i tried the same method to for all 6 picture
 
 ![](Aspose.Words.901b1fef-9e5f-4efc-a673-22245dea28e8.011.png)
 ```
-FLAG : UJCYC{N0T\_1NV1S1BL3\_3N0UGH}
+FLAG : UJCYC{N0T_1NV1S1BL3_3N0UGH}
 ```
